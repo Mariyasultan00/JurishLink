@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar class="app-toolbar">
+    
+    <!-- Custom Back Button -->
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tab3']" fill="clear">
+        <ion-icon name="chevron-back-outline" style="color:#1e3a8a; margin: 0px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>JurishLink</span>
+    </div>
+     <ion-buttons slot="end">
+     <ion-button routerLink="/notifications">
+        <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
+        <ion-badge color="primary" class="notification-badge">3</ion-badge>
+      </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Property Rental Agreement</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        This Property Rental Agreement is made on <strong>11th September 2025</strong> 
+        between the following parties:
+      </p>
+
+      <p><strong>Owner:</strong> John Doe, residing at 45 Park Avenue, Springfield.</p>
+      <p><strong>Tenant:</strong> Jane Smith, residing at 22 Oak Street, Springfield.</p>
+
+      <p><strong>Property Address:</strong> 123 Main Street, Springfield</p>
+      <p><strong>Agreement Duration:</strong> 11 Months (from 11th September 2025 to 10th August 2026)</p>
+      <p><strong>Monthly Rent:</strong> ₹15,000 (due on or before the 5th of every month)</p>
+      <p><strong>Security Deposit:</strong> ₹50,000 (refundable at the end of tenancy)</p>
+
+      <ion-list>
+        <ion-list-header>
+          <strong>Terms & Conditions</strong>
+        </ion-list-header>
+        <ion-item>
+          1. Rent must be paid through bank transfer or UPI to Owner’s account.
+        </ion-item>
+        <ion-item>
+          2. Tenant shall not sublet the property without Owner’s prior written consent.
+        </ion-item>
+        <ion-item>
+          3. No structural modifications are allowed without Owner’s approval.
+        </ion-item>
+        <ion-item>
+          4. Tenant shall bear charges for electricity, water, internet, and gas bills.
+        </ion-item>
+        <ion-item>
+          5. Owner shall be responsible for major repairs and property taxes.
+        </ion-item>
+        <ion-item>
+          6. In case of early termination, one month’s prior notice is mandatory.
+        </ion-item>
+        <ion-item>
+          7. Security deposit will be refunded after property inspection.
+        </ion-item>
+      </ion-list>
+
+      <h3 style="margin-top:15px;">Payment Details</h3>
+      <p><strong>Bank Name:</strong> HDFC Bank</p>
+      <p><strong>Account No:</strong> 1234567890</p>
+      <p><strong>IFSC:</strong> HDFC0000123</p>
+      <p><strong>UPI ID:</strong> johndoe@hdfcbank</p>
+
+      <h3 style="margin-top:15px;">Signatures</h3>
+      <p><strong>Owner’s Signature:</strong> __________________________</p>
+      <p><strong>Tenant’s Signature:</strong> _________________________</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

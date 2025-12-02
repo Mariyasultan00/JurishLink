@@ -1,0 +1,128 @@
+.my-clients-page {
+  --background: #f9fafb;
+  font-family: 'Inter', sans-serif;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 8px;
+  h2 {
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  .subtitle {
+    color: #6b7280;
+    font-size: 14px;
+  }
+}
+
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 18px;
+}
+.add-client-btn {
+   --background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.insights-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+
+  .insight-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    padding: 10px 14px;
+    ion-icon {
+      font-size: 26px;
+      color: #1e3a8a;
+      margin-right: 10px;
+    }
+    h4 {
+      margin: 0;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+    p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 13px;
+    }
+  }
+}
+
+.custom-searchbar {
+  --background: #fff;
+  --border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+}
+
+.filter-buttons ion-segment {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+} 
+.client-card {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(30, 58, 138, 0.08);
+  transition: all 0.25s ease;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(30, 58, 138, 0.12);
+  }
+}
+
+.client-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+  ion-icon {
+    font-size: 13px;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  ion-icon {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+  span {
+    font-size: 12px;
+    color: #6b7280;
+  }
+}
+
+.price-container {
+  text-align: right;
+  h4 {
+    color: #1e3a8a;
+    font-weight: 600;
+    margin: 0;
+  }
+  p {
+    color: #9ca3af;
+    font-size: 12px;
+  }
+}

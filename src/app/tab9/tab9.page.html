@@ -1,0 +1,94 @@
+<app-headerr></app-headerr>
+
+<ion-content class="ion-padding cause-list-page">
+
+  <div class="dashboard-header">
+    <h2>📜 Cause List</h2>
+    <p>Track your hearings, upcoming cases, and recent closures — all in one place.</p>
+  </div>
+
+  <!-- ===== Today's Hearings ===== -->
+  <div class="section-header">
+    <h3>📅 Hearings Today</h3>
+  </div>
+
+  <ion-card class="case-card today">
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Case #A1024</h3>
+        <p><strong>Client:</strong> Rahul Singh</p>
+        <p><strong>Parties:</strong> State vs Rahul Singh</p>
+        <p><ion-icon name="location-outline"></ion-icon> Delhi High Court, Courtroom 3</p>
+      </ion-label>
+    </ion-item>
+    <div class="case-footer">
+      <ion-button color="warning" size="small" fill="solid">Join Hearing</ion-button>
+      <ion-button fill="outline" color="primary" size="small" routerLink="/document1">View Details</ion-button>
+    </div>
+  </ion-card>
+
+  <!-- ===== Upcoming Cases ===== -->
+  <div class="section-header">
+    <h3>🕒 Upcoming Cases</h3>
+  </div>
+
+  <ion-card class="case-card upcoming">
+    <ion-item lines="none">
+      <ion-icon name="briefcase-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h3>Case #A1025</h3>
+        <p><strong>Client:</strong> Ananya Verma</p>
+        <p><strong>Date:</strong> November 3, 2025</p>
+        <p><ion-icon name="location-outline"></ion-icon> Mumbai District Court, Chamber 2</p>
+      </ion-label>
+    </ion-item>
+    <div class="case-footer">
+      <ion-badge color="primary">Upcoming</ion-badge>
+      <ion-button fill="outline" color="primary" size="small" routerLink="/document2">View Details</ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card class="case-card upcoming">
+    <ion-item lines="none">
+      <ion-icon name="briefcase-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h3>Case #A1026</h3>
+        <p><strong>Client:</strong> Nina Patel</p>
+        <p><strong>Date:</strong> November 5, 2025</p>
+        <p><ion-icon name="location-outline"></ion-icon> Bangalore Civil Court, Bench 1</p>
+      </ion-label>
+    </ion-item>
+    <div class="case-footer">
+      <ion-badge color="primary">Upcoming</ion-badge>
+      <ion-button fill="outline" color="primary" size="small" routerLink="/document3">View Details</ion-button>
+    </div>
+  </ion-card>
+
+  <!-- ===== Closed Cases ===== -->
+  <div class="section-header">
+    <h3>✅ Recently Closed</h3>
+  </div>
+
+  <ion-card class="case-card closed">
+    <ion-item lines="none">
+      <ion-icon name="checkmark-circle-outline" slot="start" color="success"></ion-icon>
+      <ion-label>
+        <h3>Case #A1027</h3>
+        <p><strong>Client:</strong> Rohit Sharma</p>
+        <p><strong>Closed on:</strong> October 25, 2025</p>
+        <p><ion-icon name="location-outline"></ion-icon> Karnataka High Court</p>
+      </ion-label>
+    </ion-item>
+    <div class="case-footer">
+      <ion-badge color="success">Closed</ion-badge>
+      <ion-button fill="outline" color="success" size="small" routerLink="/judgement4">View Judgment</ion-button>
+    </div>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>

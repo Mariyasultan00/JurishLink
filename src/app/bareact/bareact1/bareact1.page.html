@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="app-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/bareact']" fill="clear">
+        <ion-icon name="chevron-back-outline" style="color:#1e3a8a; margin: 0px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>JurishLink</span>
+    </div>
+     <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
+        <ion-badge color="primary" class="notification-badge">3</ion-badge>
+      </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>The Indian Penal Code (IPC), 1860</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h3>Purpose</h3>
+      <p>
+       The Indian Penal Code is the substantive criminal law of India. It defines what constitutes a crime and specifies punishments for each offence.
+       Drafted by Lord Macaulay, it came into force in 1862 and continues to be the most important criminal statute in India.
+      </p>
+       <h3>Structure</h3>
+      
+      <p><strong>23 Chapters</strong></p>
+      <p><strong>511 Sections</strong> </p>
+      <p><strong>Divided into parts dealing with:</strong></p><ul>
+        <li>General explanations and definitions (Sections 1–52).</li>
+        <li>General exceptions (Sections 76–106)</li>
+        <li>Offences against the State, public tranquility, human body, property, etc.</li>
+      </ul>
+      <h3>Key Provisions</h3>
+      <p><strong>Section 299–304:</strong> Culpable homicide and murder</p>
+      <p><strong>Section 375–376:</strong> Definition and punishment of rape</p>
+      <p><strong>Section 378–382:</strong> Theft and robbery</p>
+      <p><strong>Section 415–420:</strong> Cheating and fraud</p>
+      <p><strong>Section 499–500:</strong>Defamation</p>
+
+      <h3>Importance</h3>
+       <p>Applies to all citizens within India (except certain exceptions like the Army Act).</p>
+      <p>Provides a uniform criminal code across the country.</p>
+      <p>Forms the basis for FIRs, investigations, and criminal trials.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>

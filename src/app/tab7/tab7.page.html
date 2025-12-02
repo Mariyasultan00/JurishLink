@@ -1,0 +1,61 @@
+<app-headerr></app-headerr>
+
+<ion-content class="ion-padding my-clients-page">
+  <div class="page-header">
+    <h2>My Client Cases</h2>
+    <p class="subtitle">Track, manage, and connect with your clients efficiently</p>
+  </div>
+  
+  <ion-searchbar
+    placeholder="Search by name, case type or status"
+    animated
+    [(ngModel)]="searchQuery"
+    class="custom-searchbar">
+  </ion-searchbar>
+
+  <div class="filter-buttons">
+    <ion-segment [(ngModel)]="selectedFilter" value="ALL" mode="md">
+      <ion-segment-button value="ALL"><ion-label>All</ion-label></ion-segment-button>
+      <ion-segment-button value="ACTIVE"><ion-label>Active</ion-label></ion-segment-button>
+      <ion-segment-button value="PENDING"><ion-label>Pending</ion-label></ion-segment-button>
+      <ion-segment-button value="CLOSED"><ion-label>Closed</ion-label></ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="client-list">
+    <ion-card *ngFor="let client of getFilteredClients()" class="client-card"  (click)="viewClient(client)">
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img [src]="client.image" alt="Client photo" />
+        </ion-avatar>
+
+        <ion-label>
+          <div class="client-header">
+            <h3>{{ client.name }}</h3>
+            
+          </div>
+          <p>{{ client.caseType }}</p>
+          <div class="case-meta">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <span>Next Hearing: {{ client.nextHearing }}</span>
+          </div>
+        </ion-label>
+
+        <div class="right-section" slot="end">
+          <div class="price-container">
+            <h4>{{ client.amount }}$</h4>
+            <p>Paid</p>
+          </div>
+        
+        </div>
+      </ion-item>
+    </ion-card>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>
+

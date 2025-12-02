@@ -1,0 +1,57 @@
+.lawyer-page {
+  .page-header {
+    text-align: center;
+    margin-bottom: 1.2rem;
+
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+  }
+
+  .case-item {
+    background: #f8fafc;
+    border-radius: 12px;
+    margin: 8px 0;
+    padding: 10px 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    ion-icon {
+      font-size: 1.6rem;
+    }
+
+    .case-title {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .case-details {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .status {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .scheduled {
+      color: #2563eb;
+    }
+
+    .in.progress {
+      color: #d97706;
+    }
+
+    .completed {
+      color: #16a34a;
+    }
+  }
+}

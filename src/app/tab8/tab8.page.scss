@@ -1,0 +1,129 @@
+/* Toolbar */
+.custom-toolbar {
+  --background: #ffffff;
+  --color: #1a1a1a;
+  font-weight: 600;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Content */
+.judgment-content {
+  --background: #f7f9fc;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Featured Case Card */
+.featured-judgment {
+  background: linear-gradient(135deg, #1e3a8a, #3f74f4);
+  color: #fff;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 14px;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.25);
+}
+.featured-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.featured-text p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+.read-btn {
+  --color: #1e3a8a;
+  --background: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Search & Filter */
+.search-sort {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+.searchbar-custom {
+  --background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1;
+}
+.filter-btn {
+  --border-color: #e5e9f2;
+  color: #1e3a8a;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+/* Tabs */
+.judgment-tabs {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.judgment-tabs span {
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+.judgment-tabs .active {
+  color: #1e3a8a;
+  border-bottom: 2px solid #1e3a8a;
+}
+
+/* Judgment Cards */
+.judgment-list {
+  margin-top: 10px;
+}
+.judgment-card {
+  background: #fff;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 14px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  align-items: flex-start;
+}
+.case-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+.case-info .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+.case-info .summary {
+  font-size: 13px;
+  color: #4b5563;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.arrow-icon {
+  color: #9ca3af;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Floating Filter */
+ion-fab-button {
+  --background: linear-gradient(135deg, #1e3a8a, #3f74f4);
+  --box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+/* Footer */
+ion-footer {
+  --background: #fff;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.08);
+}
+ion-footer ion-button {
+  --color: #1e3a8a;
+}

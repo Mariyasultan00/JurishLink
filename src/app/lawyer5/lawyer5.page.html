@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tab2']" fill="clear">
+        <ion-icon name="chevron-back-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="page-title">Lawyer Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <!-- Lawyer Image -->
+  <div class="image-container">
+    <img [src]="lawyer.image" alt="Lawyer Image" />
+  </div>
+
+  <!-- Lawyer Info Card -->
+  <ion-card class="lawyer-info-card">
+    <ion-card-content>
+      <h2 class="lawyer-name">{{ lawyer.name }}</h2>
+      <p class="lawyer-location">Lawyer in New Delhi</p>
+
+      <div class="rating-section">
+        <ion-icon name="star" color="warning"></ion-icon>
+        <span class="rating-text">{{ lawyer.rating }}</span>
+        <span class="reviews">({{ lawyer.reviews }} Reviews)</span>
+      </div>
+
+      <h3 class="section-title">About {{ lawyer.specialization }}</h3>
+      <p class="lawyer-bio">{{ lawyer.bio }}</p>
+
+      <!-- Time Selector -->
+      <div class="choose-time">
+        <div class="time-header">
+          <h3>Choose time</h3>
+          
+        </div>
+
+        <div class="date-options">
+          <div class="date-box" *ngFor="let date of dates" [class.selected]="date.selected" (click)="selectDate(date)">
+            <p class="day">{{ date.day }}</p>
+            <p class="date">{{ date.date }}</p>
+          </div>
+        </div>
+
+        <div class="time-options">
+          <ion-button
+            *ngFor="let time of timeSlots"
+            [fill]="time === selectedTime ? 'solid' : 'outline'"
+            (click)="selectTime(time)"
+          >
+            {{ time }}
+          </ion-button>
+        </div>
+      </div>
+
+      <!-- Book Button -->
+      <ion-button expand="block" class="book-btn" routerLink="/payment">Book Lawyer</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

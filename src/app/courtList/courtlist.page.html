@@ -1,0 +1,43 @@
+<app-headerr></app-headerr>
+
+<ion-content class="ion-padding">
+  <h2 class="page-title">Court Directory of India 🏛️</h2>
+
+  <!-- Search -->
+  <ion-searchbar
+    placeholder="Search by State (e.g., Maharashtra)"
+    [(ngModel)]="searchTerm"
+    (ionInput)="filterCourts()">
+  </ion-searchbar>
+
+  <!-- Supreme Court (Static Display) -->
+  <ion-card class="court-card">
+    <ion-card-header>
+      <ion-card-title>Supreme Court of India</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Location:</strong> New Delhi</p>
+      <p><strong>Jurisdiction:</strong> Entire India</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Filtered Courts -->
+  <div *ngFor="let court of filteredCourts">
+    <ion-card class="court-card">
+      <ion-card-header>
+        <ion-card-title>{{ court.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Type:</strong> {{ court.type }}</p>
+        <p><strong>Location:</strong> {{ court.location }}</p>
+        <p><strong>Jurisdiction:</strong> {{ court.jurisdiction }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,62 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="login-card">
+    <h2 class="welcome-text">Welcome to JurishLink</h2>
+    <p class="sub-text">Your trusted legal companion</p>
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item class="input-field">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" clearInput></ion-input>
+    </ion-item>
+
+    <!-- Checkbox with Terms link -->
+    <ion-item>
+  <ion-checkbox slot="start" [(ngModel)]="termsAccepted"></ion-checkbox>
+  <ion-label>
+    I agree to the <a (click)="openPopover($event)">Terms & Conditions</a>
+  </ion-label>
+</ion-item>
+    <ion-popover [isOpen]="isPopoverOpen" (didDismiss)="isPopoverOpen = false"  cssClass="transparent-popover">
+  <ng-template>
+    <ion-content class="ion-padding">
+      <h2>Terms of Use</h2>
+<p>By using JurishLink, you agree to the following terms and conditions. Please read them carefully.</p>
+
+<h3>1. General Use</h3>
+<p>JurisLink provides legal information only and is not a substitute for professional legal advice.</p>
+
+<h3>2. Responsibilities</h3>
+<p>Users must use the app lawfully and maintain the security of their account credentials. </p>
+
+<h3>3. Privacy</h3>
+<p>Your data is protected according to our <a routerLink="/privacy-policy">Privacy Policy</a>. 
+
+      <ion-button expand="block"  class="login-btn"(click)="acceptTerms()">
+        Accept & Continue
+      </ion-button>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+   
+
+    <ion-button expand="block" class="login-btn" [routerLink]="['/login']">
+      SignUp
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,41 @@
+.header-toolbar {
+  --border-color: #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: larger;
+  color: #1e3a8a;
+  margin-left: 4px;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+}
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 24px; 
+}
+
+.notification-icon ion-icon {
+  font-size: 28px;
+  color: #1e3a8a; 
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  background: #1e3a8a; 
+
+  color: #fff;
+}

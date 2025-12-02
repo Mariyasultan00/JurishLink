@@ -1,0 +1,77 @@
+ion-content {
+//   --background: #1e3a8a; /* deep blue */
+  --color:#1e3a8a;
+}
+p{
+  color: black;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;  
+  margin-top: 50px;
+}
+
+.logo-container img {
+  width:max-content;   /* control size */
+  height: auto;   /* maintain aspect ratio */
+}
+
+.login-card {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.welcome-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.sub-text {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  --highlight-color-focused: #1e3a8a;
+}
+
+.login-btn {
+  margin-top: 10px;
+  // --background: #1e3a8a;
+  --background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  --border-radius: 10px;
+}
+
+.signup-btn {
+  margin-top: 8px;
+  // --background: #1e3a8a;
+  --background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  --border-radius: 10px;
+  --color:white;
+}
+.transparent-popover {
+  --background: transparent;
+  --box-shadow: none;
+  backdrop-filter: blur(4px);
+}
+
+.transparent-popover .popover-content {
+  width: 95vw !important;       /* full width */
+  height: 85vh !important;      /* full height */
+  max-width: 900px; 
+  max-height: 90vh;
+  border-radius: 12px;
+  overflow: hidden;             /* keep content inside */
+  margin: auto;
+}
+
+.transparent-popover ion-content {
+  --background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;                 /* let it expand */
+  overflow-y: auto;             /* scroll if needed */
+}

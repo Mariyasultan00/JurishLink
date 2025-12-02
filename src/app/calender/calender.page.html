@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding calendar-page">
+
+  <h2 class="title">Calendar</h2>
+
+  <ion-datetime presentation="date" [(ngModel)]="selectedDate"></ion-datetime>
+
+  <h3 class="sub-title">Cases for {{ selectedDate | date:'MMM d, yyyy' }}</h3>
+
+  <ion-card class="case-card" *ngFor="let hearing of dailyCases">
+    <div class="case-info">
+      <p>Hearing: <strong>{{ hearing.time }}</strong></p>
+      <p>Next: <strong>{{ hearing.next }}</strong></p>
+      <p class="highlight">{{ hearing.status }}</p>
+    </div>
+    <h4>{{ hearing.title }}</h4>
+    <p>{{ hearing.description }}</p>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>

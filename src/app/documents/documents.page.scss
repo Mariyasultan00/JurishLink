@@ -1,0 +1,96 @@
+.custom-toolbar {
+  --background: #ffffff;
+  --color: #1e1e1e;
+  font-weight: 600;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+.document-content {
+  --background: #f8f9fb;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.case-header {
+  margin-top: 10px;
+}
+.case-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.case-header .case-id {
+  font-size: 13px;
+  color: #6c7a92;
+}
+
+/* Search + Sort */
+.search-sort {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.searchbar-custom {
+  --background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  flex: 1;
+}
+.sort-btn {
+  --border-color: #e3e7ed;
+  color: #1e3a8a;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+/* Document List */
+.document-list {
+  margin-top: 10px;
+}
+.document-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.doc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.doc-icon ion-icon {
+  color: #1e3a8a;
+  font-size: 22px;
+}
+.document-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+.document-item p {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+.more-btn ion-icon {
+  color: #7a7a7a;
+}
+
+/* Footer Navigation */
+ion-footer {
+  --background: #fff;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.08);
+}
+ion-footer ion-button {
+  --color: #1e3a8a;
+}

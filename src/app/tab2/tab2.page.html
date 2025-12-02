@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+  <h2 class="welcome-title">Find the Best Lawyers</h2>
+
+  <!-- Search Bar -->
+  <ion-searchbar
+    placeholder="Search Lawyers"
+    [(ngModel)]="searchQuery"
+    animated
+  ></ion-searchbar>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons ion-text-center">
+    <ion-button
+      fill="{{ selectedCategory === 'all' ? 'solid' : 'outline' }}"
+      (click)="goToCategory('all')"
+    >
+      All
+    </ion-button>
+
+    <ion-button
+      fill="{{ selectedCategory === 'corporate' ? 'solid' : 'outline' }}"
+      (click)="goToCategory('corporate')"
+    >
+      Corporate
+    </ion-button>
+
+    <ion-button
+      fill="{{ selectedCategory === 'family' ? 'solid' : 'outline' }}"
+      (click)="goToCategory('family')"
+    >
+      Family
+    </ion-button>
+
+    <ion-button
+      fill="{{ selectedCategory === 'criminal' ? 'solid' : 'outline' }}"
+      (click)="goToCategory('criminal')"
+    >
+      Criminal
+    </ion-button>
+  </div>
+
+  <!-- ✅ Lawyer Cards Section -->
+  <div class="lawyer-list">
+    <ion-card
+      *ngFor="let lawyer of filteredLawyers"
+      class="lawyer-card"
+      (click)="viewLawyer(lawyer)"
+    >
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img [src]="lawyer.img" [alt]="lawyer.name" />
+        </ion-avatar>
+
+        <ion-label>
+          <h3 class="lawyer-name">{{ lawyer.name }}</h3>
+          <p class="specialty">{{ lawyer.specialty }}</p>
+          <p class="rating">
+            ⭐ {{ lawyer.rating }}
+            <span class="reviews">({{ lawyer.reviews }} Reviews)</span>
+          </p>
+        </ion-label>
+
+        <div class="price" slot="end">
+          {{ lawyer.price }}$ <span>per hour</span>
+        </div>
+      </ion-item>
+
+      <ion-icon name="heart-outline" class="favorite-icon"></ion-icon>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

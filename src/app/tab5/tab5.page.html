@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding lawyer-page">
+
+  <div class="page-header">
+    <h2 class="page-title">📅 Case Timetable</h2>
+    <p class="subtitle">Stay on top of your upcoming hearings and deadlines.</p>
+  </div>
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let case of caseSchedules" class="case-item">
+      <ion-icon [name]="getIcon(case.status)" slot="start" [color]="getColor(case.status)"></ion-icon>
+
+      <ion-label>
+        <h3 class="case-title">{{ case.title }}</h3>
+        <p class="case-details">
+          <strong>Date:</strong> {{ case.date }} |
+          <strong>Time:</strong> {{ case.time }}
+        </p>
+        <p class="status" [ngClass]="case.status.toLowerCase()">
+          {{ case.status }}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

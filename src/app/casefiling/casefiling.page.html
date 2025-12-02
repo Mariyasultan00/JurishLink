@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar class="app-toolbar">
+
+    <!-- Custom Back Button -->
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tab3']" fill="clear">
+        <ion-icon name="chevron-back-outline" style="color:#1e3a8a; margin: 0px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>JurishLink</span>
+    </div>
+     <ion-buttons slot="end">
+      <ion-button routerLink="/notifications">
+        <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
+        <ion-badge color="primary" class="notification-badge">3</ion-badge>
+      </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Case Filing Document</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        This Case Filing is submitted on <strong>11th September 2025</strong> 
+        before the District Court of Springfield.
+      </p>
+
+      <h3>Case Details</h3>
+      <p><strong>Case Number:</strong> CF-2025-0012</p>
+      <p><strong>Filing Date:</strong> 11th September 2025</p>
+      <p><strong>Type of Case:</strong> Civil Dispute</p>
+      <p><strong>Jurisdiction:</strong> District Court, Springfield</p>
+
+      <h3>Parties Involved</h3>
+      <p><strong>Plaintiff:</strong> Jane Smith, 22 Oak Street, Springfield</p>
+      <p><strong>Defendant:</strong> John Doe, 45 Park Avenue, Springfield</p>
+      <p><strong>Advocate:</strong> Mr. Rahul Mehta (Enrollment No: IN123456)</p>
+
+      <h3>Grounds for Filing</h3>
+      <p>
+        The Plaintiff submits this case on the grounds of breach of agreement, 
+        non-compliance with terms, and financial damages incurred. 
+        The Defendant failed to honor the contractual obligations despite repeated notices.
+      </p>
+
+      <h3>Relief Sought</h3>
+      <ul>
+        <li>Compensation of ₹2,50,000 for damages.</li>
+        <li>Specific performance of the original agreement terms.</li>
+        <li>Legal costs incurred during the proceedings.</li>
+      </ul>
+
+      <h3>List of Evidence</h3>
+      <ol>
+        <li>Copy of the signed agreement dated 1st January 2025.</li>
+        <li>Email communications between Plaintiff and Defendant.</li>
+        <li>Payment receipts and financial statements.</li>
+      </ol>
+
+      <h3>Verification</h3>
+      <p>
+        I, Jane Smith, Plaintiff in the above case, do hereby verify that the facts 
+        stated herein are true and correct to the best of my knowledge.
+      </p>
+
+      <h3 style="margin-top:15px;">Signatures</h3>
+      <p><strong>Plaintiff’s Signature:</strong> __________________________</p>
+      <p><strong>Advocate’s Signature:</strong> __________________________</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <app-footer></app-footer>
+  </ion-toolbar>
+</ion-footer>

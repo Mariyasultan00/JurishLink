@@ -1,0 +1,56 @@
+.payment-card {
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #004d40;
+  text-align: center;
+}
+
+.btn-btn{
+    --background: #1e3a8a;
+     --border-radius: 10px;
+  --color:white;
+    font-size: 12px;
+    height: 28px;
+    margin: 6px 0;
+
+}
+.logo-container {
+  display:inline-flex;
+  font-weight: bold;
+  display: flex;
+  font-size: larger;
+  align-items: center;  /* vertical centering */
+  gap: 8px;   
+  color: #1e3a8a;  
+}
+
+.logo-container img {
+  width: 80px;  
+  height: 80px;  
+}
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 24px; /* adjusts bell size */
+}
+
+.notification-icon ion-icon {
+  font-size: 28px;
+  color: #1e3a8a; /* theme color */
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  background: #1e3a8a; /* matches theme */
+  color: #fff;
+}

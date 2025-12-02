@@ -1,0 +1,89 @@
+<app-headerr></app-headerr>
+
+<ion-content class="client-profile">
+  <!-- Header Section -->
+  <div class="profile-card">
+    <img src="assets/client3.jpeg" alt="Client Photo" class="profile-photo" />
+    <div class="profile-info">
+      <h2>{{ client.name }}</h2>
+      <p class="location">{{ client.occupation }} in {{ client.address.split(',')[2] }}</p>
+      
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="info-card">
+    <h3>About {{ client.name }}</h3>
+    <p>
+      {{ client.name }} is a professional {{ client.occupation.toLowerCase() }} with a strong record
+      of managing both civil and corporate cases efficiently. She has handled more than
+      {{ client.totalCases }} cases since {{ client.joinedOn }} and is currently managing
+      {{ client.activeCases }} active clients. Known for her clear communication and ethical approach.
+    </p>
+  </div>
+
+  <!-- Case Stats -->
+  <div class="stats-row">
+    <div class="stat-box">
+      <p>Total Cases</p>
+      <h4>{{ client.totalCases }}</h4>
+    </div>
+    <div class="stat-box">
+      <p>Active Cases</p>
+      <h4>{{ client.activeCases }}</h4>
+    </div>
+    <div class="stat-box">
+      <p>Pending Hearings</p>
+      <h4>{{ client.pendingHearings }}</h4>
+    </div>
+  </div>
+
+  <!-- Segment Tabs -->
+  <ion-segment value="overview" (ionChange)="segmentChanged($event)" mode="ios">
+    <ion-segment-button value="overview">Overview</ion-segment-button>
+    <ion-segment-button value="cases">Cases</ion-segment-button>
+    <ion-segment-button value="documents">Documents</ion-segment-button>
+  </ion-segment>
+
+  <!-- Overview Tab -->
+  <div *ngIf="selectedSegment === 'overview'" class="tab-content">
+    <h4>Personal Information</h4>
+    <p><strong>Contact:</strong> {{ client.contact }}</p>
+    <p><strong>Email:</strong> {{ client.email }}</p>
+    <p><strong>Address:</strong> {{ client.address }}</p>
+    <p><strong>Joined On:</strong> {{ client.joinedOn }}</p>
+  </div>
+
+  <!-- Case History Tab -->
+  <div *ngIf="selectedSegment === 'cases'" class="tab-content">
+    <h4>Case History</h4>
+    <div class="case-item" *ngFor="let c of client.cases">
+      <div>
+        <h5>{{ c.title }}</h5>
+        <p>Status: <span>{{ c.status }}</span></p>
+        <p>Last Hearing: {{ c.lastHearing }}</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" class="chev"></ion-icon>
+    </div>
+  </div>
+
+  <!-- Documents Tab -->
+  <div *ngIf="selectedSegment === 'documents'" class="tab-content">
+    <h4>Documents</h4>
+    <div class="doc-item" *ngFor="let d of client.documents">
+      <ion-icon name="document-text-outline"></ion-icon>
+      <p>{{ d.name }}</p>
+      <ion-button fill="outline" size="small" color="primary">View</ion-button>
+    </div>
+  </div>
+
+  <ion-button expand="block" class="book-btn">
+    Book Appointment
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <app-footerr></app-footerr>
+  </ion-toolbar>
+</ion-footer>

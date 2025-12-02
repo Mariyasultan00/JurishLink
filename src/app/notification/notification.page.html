@@ -1,0 +1,40 @@
+<ion-header translucent="true">
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab6" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="notifications-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="notification-page">
+  <div class="header-bg"></div>
+
+  <ion-list lines="none" class="notification-list">
+    <ion-item
+      *ngFor="let notification of notifications"
+      class="notification-card"
+      detail="false"
+    >
+      <ion-icon [name]="notification.icon" slot="start" class="icon"></ion-icon>
+      <ion-label>
+        <div class="title-row">
+          <h2>{{ notification.title }}</h2>
+          <span *ngIf="notification.unread" class="badge"></span>
+        </div>
+        <p>{{ notification.message }}</p>
+        <small>{{ notification.time }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div class="empty-state" *ngIf="notifications.length === 0">
+    <ion-icon name="notifications-off-outline" class="empty-icon"></ion-icon>
+    <p>No notifications yet</p>
+  </div>
+</ion-content>

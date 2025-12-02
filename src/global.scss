@@ -24,6 +24,10 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+@import 'swiper/swiper-bundle.css';
+
+
+
 
 /**
  * Ionic Dark Mode
@@ -34,4 +38,12 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+html, body {
+  height: 100%;
+  overflow-y: auto; /* allow scroll globally */
+}
+
+ion-content {
+  --overflow: auto; /* force scroll inside pages */
+}

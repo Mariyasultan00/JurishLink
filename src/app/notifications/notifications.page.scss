@@ -1,0 +1,97 @@
+.header-toolbar {
+//   --background: #1e3a8a;
+  --background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  color: white;
+  ion-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+.header-bg {
+  height: 60px;
+ background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  border-bottom-left-radius: 50% 30%;
+  border-bottom-right-radius: 50% 30%;
+}
+
+.notification-page {
+  --background: #ffffff;
+  position: relative;
+  margin-top: -100px;
+}
+
+.notification-list {
+  padding: 0 1rem;
+}
+
+.notification-card {
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(30, 58, 138, 0.15);
+  }
+
+  .icon {
+    font-size: 28px;
+    color: #1e3a8a;
+    background: #eff6ff;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  h2 {
+    color: #1e3a8a;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    color: #374151;
+    font-size: 0.9rem;
+    margin: 4px 0;
+  }
+
+  small {
+    color: #6b7280;
+    font-size: 0.75rem;
+  }
+
+  .badge {
+    background-color: #ef4444;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 40%;
+  color: #9ca3af;
+
+  .empty-icon {
+    font-size: 4rem;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #1e3a8a;
+  }
+}

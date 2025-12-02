@@ -1,0 +1,50 @@
+ion-content {
+//   --background: #1e3a8a; /* deep blue */
+  --color:#1e3a8a;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;  
+  margin-top: 50px;
+}
+
+.logo-container img {
+  width: max-content;   /* control size */
+  height: auto;   /* maintain aspect ratio */
+}
+
+.login-card {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.welcome-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.sub-text {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  --highlight-color-focused: #1e3a8a;
+}
+
+.login-btn {
+  margin-top: 10px;
+  --background: linear-gradient(135deg, #1e3a8a, #4388f7);
+  --border-radius: 10px;
+}
+
+.signup-btn {
+  margin-top: 8px;
+   --border-radius: 10px;
+  --color:linear-gradient(135deg, #1e3a8a, #4388f7)
+ 
+
+}

@@ -1,0 +1,39 @@
+.calendar-page {
+  --background: #fdfaf7;
+}
+
+.title {
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+ion-datetime {
+  border-radius: 16px;
+  background:#e4edfa;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-weight: 500;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.case-card {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.case-info p {
+  font-size: 0.85rem;
+  margin: 2px 0;
+}
+
+.highlight {
+  color:#17438a;
+  font-weight: 500;
+}
