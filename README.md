@@ -1,5 +1,4 @@
 # JurishLink
-# JurishLink
 
 **JurishLink** is an intuitive platform designed to connect individuals seeking legal assistance with qualified lawyers across India. By leveraging modern web technologies and APIs, JurishLink enables users to search, filter, and connect with lawyers efficiently and reliably.
 
